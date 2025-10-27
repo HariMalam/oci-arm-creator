@@ -1,0 +1,13 @@
+services:
+  oci-creator:
+    # Tells Compose to build the image from the Dockerfile in this directory
+    build: .
+    container_name: oci-creator
+    restart: unless-stopped
+    ports:
+      # Maps your host port 3000 to the container's port 3000 (for the health check)
+      - "3000:3000"
+    env_file:
+      # This is the most important part:
+      # It reads your .env file and passes all variables to the container
+      - .env
