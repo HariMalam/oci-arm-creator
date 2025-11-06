@@ -1,18 +1,31 @@
 {
   "name": "oci-arm-creator",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Automatically creates an Always Free OCI ARM VM when capacity is available.",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HariMalam/oci-arm-creator.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/HariMalam/oci-arm-creator/issues"
+  },
+  "homepage": "https://github.com/HariMalam/oci-arm-creator#readme",
   "dependencies": {
+    "consola": "^3.4.2",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "node-cron": "^4.2.1",
-    "oci-sdk": "^2.119.1"
+    "nodemailer": "^7.0.10",
+    "oci-sdk": "^2.121.0"
   }
 }

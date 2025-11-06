@@ -1,27 +1,23 @@
-# --- Stage 1: Build Stage ---
-# Use a lean base image
-FROM node:22-alpine AS builder
+# Start from the official Node.js 24 LTS image
+FROM node:24-alpine
 
-WORKDIR /app
+# Install bun
+RUN npm install -g bun
 
-# Copy package files and install production dependencies
-COPY package*.json ./
-RUN npm install --omit=dev
+# Set the working directory
+WORKDIR /usr/src/app
 
-# --- Stage 2: Final Stage ---
-# Start from the same lean base
-FROM node:22-alpine
+# Copy package.json and the bun lockfile
+COPY package.json bun.lock ./
 
-WORKDIR /app
+# Install *only* production dependencies using bun
+RUN bun install --production
 
-# Copy dependencies from the builder stage
-COPY --from=builder /app/node_modules ./node_modules
+# Copy the application source code
+COPY src/ ./src/
 
-# Copy your application code
-COPY ./src ./src
-
-# Expose the port your server runs on
+# Expose the port the app runs on
 EXPOSE 3000
 
-# The command to run your app
-CMD ["node", "src/index.js"]
+# The command to run the application using node
+CMD [ "node", "src/index.js" ]

@@ -1,0 +1,562 @@
+{
+  "lockfileVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "oci-arm-creator",
+      "dependencies": {
+        "consola": "^3.4.2",
+        "dotenv": "^17.2.3",
+        "express": "^5.1.0",
+        "nodemailer": "^7.0.10",
+        "oci-sdk": "^2.121.0",
+      },
+    },
+  },
+  "packages": {
+    "@types/isomorphic-fetch": ["@types/isomorphic-fetch@0.0.35", "", {}, "sha512-DaZNUvLDCAnCTjgwxgiL1eQdxIKEpNLOlTNtAgnZc50bG2copGhRrFN9/PxPBuJe+tZVLCbQ7ls0xveXVRPkvw=="],
+
+    "@types/jsonwebtoken": ["@types/jsonwebtoken@9.0.0", "", { "dependencies": { "@types/node": "*" } }, "sha512-mM4TkDpA9oixqg1Fv2vVpOFyIVLJjm5x4k0V+K/rEsizfjD7Tk7LKk3GTtbB7KCfP0FEHQtsZqFxYA0+sijNVg=="],
+
+    "@types/jssha": ["@types/jssha@2.0.0", "", {}, "sha512-oBnY3csYnXfqZXDRBJwP1nDDJCW/+VMJ88UHT4DCy0deSXpJIQvMCwYlnmdW4M+u7PiSfQc44LmiFcUbJ8hLEw=="],
+
+    "@types/node": ["@types/node@24.10.0", "", { "dependencies": { "undici-types": "~7.16.0" } }, "sha512-qzQZRBqkFsYyaSWXuEHc2WR9c0a0CXwiE5FWUvn7ZM+vdy1uZLfCunD38UzhuB7YN/J11ndbDBcTmOdxJo9Q7A=="],
+
+    "@types/opossum": ["@types/opossum@4.1.1", "", { "dependencies": { "@types/node": "*" } }, "sha512-9TMnd8AWRVtnZMqBbbzceQoJdafErgUViogFaQ3eetsbeLtiFFZ695mepNaLtlfJi4uRP3GmHfe3CJ2DZKaxYA=="],
+
+    "@types/sshpk": ["@types/sshpk@1.10.3", "", { "dependencies": { "@types/node": "*" } }, "sha512-cru1waDhHZnZuB18E6Dgf2UXf8U93mdOEDcKYe5jTri+fpucidSs7DLmGICpLxN+95aYkwtgeyny9fBFzQVdmA=="],
+
+    "accepts": ["accepts@2.0.0", "", { "dependencies": { "mime-types": "^3.0.0", "negotiator": "^1.0.0" } }, "sha512-5cvg6CtKwfgdmVqY1WIiXKc3Q1bkRqGLi+2W/6ao+6Y7gu/RCwRuAhGEzh5B4KlszSuTLgZYuqFqo5bImjNKng=="],
+
+    "asn1": ["asn1@0.2.6", "", { "dependencies": { "safer-buffer": "~2.1.0" } }, "sha512-ix/FxPn0MDjeyJ7i/yoHGFt/EX6LyNbxSEhPPXODPL+KB0VPk86UYfL0lMdy+KCnv+fmvIzySwaK5COwqVbWTQ=="],
+
+    "assert-plus": ["assert-plus@1.0.0", "", {}, "sha512-NfJ4UzBCcQGLDlQq7nHxH+tv3kyZ0hHQqF5BO6J7tNJeP5do1llPr8dZ8zHonfhAu0PHAdMkSo+8o0wxg9lZWw=="],
+
+    "await-semaphore": ["await-semaphore@0.1.3", "", {}, "sha512-d1W2aNSYcz/sxYO4pMGX9vq65qOTu0P800epMud+6cYYX0QcT7zyqcxec3VWzpgvdXo57UWmVbZpLMjX2m1I7Q=="],
+
+    "bcrypt-pbkdf": ["bcrypt-pbkdf@1.0.2", "", { "dependencies": { "tweetnacl": "^0.14.3" } }, "sha512-qeFIXtP4MSoi6NLqO12WfqARWWuCKi2Rn/9hJLEmtB5yTNr9DqFWkJRCf2qShWzPeAMRnOgCrq0sg/KLv5ES9w=="],
+
+    "body-parser": ["body-parser@2.2.0", "", { "dependencies": { "bytes": "^3.1.2", "content-type": "^1.0.5", "debug": "^4.4.0", "http-errors": "^2.0.0", "iconv-lite": "^0.6.3", "on-finished": "^2.4.1", "qs": "^6.14.0", "raw-body": "^3.0.0", "type-is": "^2.0.0" } }, "sha512-02qvAaxv8tp7fBa/mw1ga98OGm+eCbqzJOKoRt70sLmfEEi+jyBYVTDGfCL/k06/4EMk/z01gCe7HoCH/f2LTg=="],
+
+    "buffer-equal-constant-time": ["buffer-equal-constant-time@1.0.1", "", {}, "sha512-zRpUiDwd/xk6ADqPMATG8vc9VPrkck7T07OIx0gnjmJAnHnTVXNQG3vfvWNuiZIkwu9KrKdA1iJKfsfTVxE6NA=="],
+
+    "bytes": ["bytes@3.1.2", "", {}, "sha512-/Nf7TyzTx6S3yRJObOAV7956r8cr2+Oj8AC5dt8wSP3BQAoeX58NoHyCU8P8zGkNXStjTSi6fzO6F0pBdcYbEg=="],
+
+    "call-bind-apply-helpers": ["call-bind-apply-helpers@1.0.2", "", { "dependencies": { "es-errors": "^1.3.0", "function-bind": "^1.1.2" } }, "sha512-Sp1ablJ0ivDkSzjcaJdxEunN5/XvksFJ2sMBFfq6x0ryhQV/2b/KwFe21cMpmHtPOSij8K99/wSfoEuTObmuMQ=="],
+
+    "call-bound": ["call-bound@1.0.4", "", { "dependencies": { "call-bind-apply-helpers": "^1.0.2", "get-intrinsic": "^1.3.0" } }, "sha512-+ys997U96po4Kx/ABpBCqhA9EuxJaQWDQg7295H4hBphv3IZg0boBKuwYpt4YXp6MZ5AmZQnU/tyMTlRpaSejg=="],
+
+    "consola": ["consola@3.4.2", "", {}, "sha512-5IKcdX0nnYavi6G7TtOhwkYzyjfJlatbjMjuLSfE2kYT5pMDOilZ4OvMhi637CcDICTmz3wARPoyhqyX1Y+XvA=="],
+
+    "content-disposition": ["content-disposition@1.0.0", "", { "dependencies": { "safe-buffer": "5.2.1" } }, "sha512-Au9nRL8VNUut/XSzbQA38+M78dzP4D+eqg3gfJHMIHHYa3bg067xj1KxMUWj+VULbiZMowKngFFbKczUrNJ1mg=="],
+
+    "content-type": ["content-type@1.0.5", "", {}, "sha512-nTjqfcBFEipKdXCv4YDQWCfmcLZKm81ldF0pAopTvyrFGVbcR6P/VAAd5G7N+0tTr8QqiU0tFadD6FK4NtJwOA=="],
+
+    "cookie": ["cookie@0.7.2", "", {}, "sha512-yki5XnKuf750l50uGTllt6kKILY4nQ1eNIQatoXEByZ5dWgnKqbnqmTrBE5B4N7lrMJKQ2ytWMiTO2o0v6Ew/w=="],
+
+    "cookie-signature": ["cookie-signature@1.2.2", "", {}, "sha512-D76uU73ulSXrD1UXF4KE2TMxVVwhsnCgfAyTg9k8P6KGZjlXKrOLe4dJQKI3Bxi5wjesZoFXJWElNWBjPZMbhg=="],
+
+    "core-util-is": ["core-util-is@1.0.2", "", {}, "sha512-3lqz5YjWTYnW6dlDa5TLaTCcShfar1e40rmcJVwCBJC6mWlFuj0eCHIElmG1g5kyuJ/GD+8Wn4FFCcz4gJPfaQ=="],
+
+    "dashdash": ["dashdash@1.14.1", "", { "dependencies": { "assert-plus": "^1.0.0" } }, "sha512-jRFi8UDGo6j+odZiEpjazZaWqEal3w/basFjQHQEwVtZJGDpxbH1MeYluwCS8Xq5wmLJooDlMgvVarmWfGM44g=="],
+
+    "debug": ["debug@4.4.3", "", { "dependencies": { "ms": "^2.1.3" } }, "sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA=="],
+
+    "depd": ["depd@2.0.0", "", {}, "sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw=="],
+
+    "dotenv": ["dotenv@17.2.3", "", {}, "sha512-JVUnt+DUIzu87TABbhPmNfVdBDt18BLOWjMUFJMSi/Qqg7NTYtabbvSNJGOJ7afbRuv9D/lngizHtP7QyLQ+9w=="],
+
+    "dunder-proto": ["dunder-proto@1.0.1", "", { "dependencies": { "call-bind-apply-helpers": "^1.0.1", "es-errors": "^1.3.0", "gopd": "^1.2.0" } }, "sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A=="],
+
+    "ecc-jsbn": ["ecc-jsbn@0.1.2", "", { "dependencies": { "jsbn": "~0.1.0", "safer-buffer": "^2.1.0" } }, "sha512-eh9O+hwRHNbG4BLTjEl3nw044CkGm5X6LoaCf7LPp7UU8Qrt47JYNi6nPX8xjW97TKGKm1ouctg0QSpZe9qrnw=="],
+
+    "ecdsa-sig-formatter": ["ecdsa-sig-formatter@1.0.11", "", { "dependencies": { "safe-buffer": "^5.0.1" } }, "sha512-nagl3RYrbNv6kQkeJIpt6NJZy8twLB/2vtz6yN9Z4vRKHN4/QZJIEbqohALSgwKdnksuY3k5Addp5lg8sVoVcQ=="],
+
+    "ee-first": ["ee-first@1.1.1", "", {}, "sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow=="],
+
+    "encodeurl": ["encodeurl@2.0.0", "", {}, "sha512-Q0n9HRi4m6JuGIV1eFlmvJB7ZEVxu93IrMyiMsGC0lrMJMWzRgx6WGquyfQgZVb31vhGgXnfmPNNXmxnOkRBrg=="],
+
+    "es-define-property": ["es-define-property@1.0.1", "", {}, "sha512-e3nRfgfUZ4rNGL232gUgX06QNyyez04KdjFrF+LTRoOXmrOgFKDg4BCdsjW8EnT69eqdYGmRpJwiPVYNrCaW3g=="],
+
+    "es-errors": ["es-errors@1.3.0", "", {}, "sha512-Zf5H2Kxt2xjTvbJvP2ZWLEICxA6j+hAmMzIlypy4xcBg1vKVnx89Wy0GbS+kf5cwCVFFzdCFh2XSCFNULS6csw=="],
+
+    "es-object-atoms": ["es-object-atoms@1.1.1", "", { "dependencies": { "es-errors": "^1.3.0" } }, "sha512-FGgH2h8zKNim9ljj7dankFPcICIK9Cp5bm+c2gQSYePhpaG5+esrLODihIorn+Pe6FGJzWhXQotPv73jTaldXA=="],
+
+    "es6-promise": ["es6-promise@4.2.6", "", {}, "sha512-aRVgGdnmW2OiySVPUC9e6m+plolMAJKjZnQlCwNSuK5yQ0JN61DZSO1X1Ufd1foqWRAlig0rhduTCHe7sVtK5Q=="],
+
+    "escape-html": ["escape-html@1.0.3", "", {}, "sha512-NiSupZ4OeuGwr68lGIeym/ksIZMJodUGOSCZ/FSnTxcrekbvqrgdUxlJOMpijaKZVjAJrWrGs/6Jy8OMuyj9ow=="],
+
+    "etag": ["etag@1.8.1", "", {}, "sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg=="],
+
+    "express": ["express@5.1.0", "", { "dependencies": { "accepts": "^2.0.0", "body-parser": "^2.2.0", "content-disposition": "^1.0.0", "content-type": "^1.0.5", "cookie": "^0.7.1", "cookie-signature": "^1.2.1", "debug": "^4.4.0", "encodeurl": "^2.0.0", "escape-html": "^1.0.3", "etag": "^1.8.1", "finalhandler": "^2.1.0", "fresh": "^2.0.0", "http-errors": "^2.0.0", "merge-descriptors": "^2.0.0", "mime-types": "^3.0.0", "on-finished": "^2.4.1", "once": "^1.4.0", "parseurl": "^1.3.3", "proxy-addr": "^2.0.7", "qs": "^6.14.0", "range-parser": "^1.2.1", "router": "^2.2.0", "send": "^1.1.0", "serve-static": "^2.2.0", "statuses": "^2.0.1", "type-is": "^2.0.1", "vary": "^1.1.2" } }, "sha512-DT9ck5YIRU+8GYzzU5kT3eHGA5iL+1Zd0EutOmTE9Dtk+Tvuzd23VBU+ec7HPNSTxXYO55gPV/hq4pSBJDjFpA=="],
+
+    "extsprintf": ["extsprintf@1.3.0", "", {}, "sha512-11Ndz7Nv+mvAC1j0ktTa7fAb0vLyGGX+rMHNBYQviQDGU0Hw7lhctJANqbPhu9nV9/izT/IntTgZ7Im/9LJs9g=="],
+
+    "finalhandler": ["finalhandler@2.1.0", "", { "dependencies": { "debug": "^4.4.0", "encodeurl": "^2.0.0", "escape-html": "^1.0.3", "on-finished": "^2.4.1", "parseurl": "^1.3.3", "statuses": "^2.0.1" } }, "sha512-/t88Ty3d5JWQbWYgaOGCCYfXRwV1+be02WqYYlL6h0lEiUAMPM8o8qKGO01YIkOHzka2up08wvgYD0mDiI+q3Q=="],
+
+    "forwarded": ["forwarded@0.2.0", "", {}, "sha512-buRG0fpBtRHSTCOASe6hD258tEubFoRLb4ZNA6NxMVHNw2gOcwHo9wyablzMzOA5z9xA9L1KNjk/Nt6MT9aYow=="],
+
+    "fresh": ["fresh@2.0.0", "", {}, "sha512-Rx/WycZ60HOaqLKAi6cHRKKI7zxWbJ31MhntmtwMoaTeF7XFH9hhBp8vITaMidfljRQ6eYWCKkaTK+ykVJHP2A=="],
+
+    "function-bind": ["function-bind@1.1.2", "", {}, "sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA=="],
+
+    "get-intrinsic": ["get-intrinsic@1.3.0", "", { "dependencies": { "call-bind-apply-helpers": "^1.0.2", "es-define-property": "^1.0.1", "es-errors": "^1.3.0", "es-object-atoms": "^1.1.1", "function-bind": "^1.1.2", "get-proto": "^1.0.1", "gopd": "^1.2.0", "has-symbols": "^1.1.0", "hasown": "^2.0.2", "math-intrinsics": "^1.1.0" } }, "sha512-9fSjSaos/fRIVIp+xSJlE6lfwhES7LNtKaCBIamHsjr2na1BiABJPo0mOjjz8GJDURarmCPGqaiVg5mfjb98CQ=="],
+
+    "get-proto": ["get-proto@1.0.1", "", { "dependencies": { "dunder-proto": "^1.0.1", "es-object-atoms": "^1.0.0" } }, "sha512-sTSfBjoXBp89JvIKIefqw7U2CCebsc74kiY6awiGogKtoSGbgjYE/G/+l9sF3MWFPNc9IcoOC4ODfKHfxFmp0g=="],
+
+    "getpass": ["getpass@0.1.7", "", { "dependencies": { "assert-plus": "^1.0.0" } }, "sha512-0fzj9JxOLfJ+XGLhR8ze3unN0KZCgZwiSSDz168VERjK8Wl8kVSdcu2kspd4s4wtAa1y/qrVRiAA0WclVsu0ng=="],
+
+    "gopd": ["gopd@1.2.0", "", {}, "sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg=="],
+
+    "has-symbols": ["has-symbols@1.1.0", "", {}, "sha512-1cDNdwJ2Jaohmb3sg4OmKaMBwuC48sYni5HUw2DvsC8LjGTLK9h+eb1X6RyuOHe4hT0ULCW68iomhjUoKUqlPQ=="],
+
+    "hasown": ["hasown@2.0.2", "", { "dependencies": { "function-bind": "^1.1.2" } }, "sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ=="],
+
+    "http-errors": ["http-errors@2.0.0", "", { "dependencies": { "depd": "2.0.0", "inherits": "2.0.4", "setprototypeof": "1.2.0", "statuses": "2.0.1", "toidentifier": "1.0.1" } }, "sha512-FtwrG/euBzaEjYeRqOgly7G0qviiXoJWnvEH2Z1plBdXgbyjv34pHTSb9zoeHMyDy33+DWy5Wt9Wo+TURtOYSQ=="],
+
+    "http-signature": ["http-signature@1.3.1", "", { "dependencies": { "assert-plus": "^1.0.0", "jsprim": "^1.2.2", "sshpk": "^1.14.1" } }, "sha512-Y29YKEc8MQsjch/VzkUVJ+2MXd9WcR42fK5u36CZf4G8bXw2DXMTWuESiB0R6m59JAWxlPPw5/Fri/t/AyyueA=="],
+
+    "iconv-lite": ["iconv-lite@0.6.3", "", { "dependencies": { "safer-buffer": ">= 2.1.2 < 3.0.0" } }, "sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw=="],
+
+    "inherits": ["inherits@2.0.4", "", {}, "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ=="],
+
+    "ipaddr.js": ["ipaddr.js@1.9.1", "", {}, "sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g=="],
+
+    "is-promise": ["is-promise@4.0.0", "", {}, "sha512-hvpoI6korhJMnej285dSg6nu1+e6uxs7zG3BYAm5byqDsgJNWwxzM6z6iZiAgQR4TJ30JmBTOwqZUw3WlyH3AQ=="],
+
+    "isomorphic-fetch": ["isomorphic-fetch@3.0.0", "", { "dependencies": { "node-fetch": "^2.6.1", "whatwg-fetch": "^3.4.1" } }, "sha512-qvUtwJ3j6qwsF3jLxkZ72qCgjMysPzDfeV240JHiGZsANBYd+EEuu35v7dfrJ9Up0Ak07D7GGSkGhCHTqg/5wA=="],
+
+    "jsbn": ["jsbn@0.1.1", "", {}, "sha512-UVU9dibq2JcFWxQPA6KCqj5O42VOmAY3zQUfEKxU0KpTGXwNoCjkX1e13eHNvw/xPynt6pU0rZ1htjWTNTSXsg=="],
+
+    "json-schema": ["json-schema@0.4.0", "", {}, "sha512-es94M3nTIfsEPisRafak+HDLfHXnKBhV3vU5eqPcS3flIWqcxJWgXHXiey3YrpaNsanY5ei1VoYEbOzijuq9BA=="],
+
+    "jsonwebtoken": ["jsonwebtoken@9.0.0", "", { "dependencies": { "jws": "^3.2.2", "lodash": "^4.17.21", "ms": "^2.1.1", "semver": "^7.3.8" } }, "sha512-tuGfYXxkQGDPnLJ7SibiQgVgeDgfbPq2k2ICcbgqW8WxWLBAxKQM/ZCu/IT8SOSwmaYl4dpTFCW5xZv7YbbWUw=="],
+
+    "jsprim": ["jsprim@1.4.2", "", { "dependencies": { "assert-plus": "1.0.0", "extsprintf": "1.3.0", "json-schema": "0.4.0", "verror": "1.10.0" } }, "sha512-P2bSOMAc/ciLz6DzgjVlGJP9+BrJWu5UDGK70C2iweC5QBIeFf0ZXRvGjEj2uYgrY2MkAAhsSWHDWlFtEroZWw=="],
+
+    "jssha": ["jssha@2.4.1", "", {}, "sha512-77DN1YurYgh+7FPCTJ2CQ6hVDHgIWiHxm4Y5/mAdnpETKYagX22pVWMz4xfKF5fcpNfMaztgVj+/B1bt2k23Eg=="],
+
+    "jwa": ["jwa@1.4.2", "", { "dependencies": { "buffer-equal-constant-time": "^1.0.1", "ecdsa-sig-formatter": "1.0.11", "safe-buffer": "^5.0.1" } }, "sha512-eeH5JO+21J78qMvTIDdBXidBd6nG2kZjg5Ohz/1fpa28Z4CcsWUzJ1ZZyFq/3z3N17aZy+ZuBoHljASbL1WfOw=="],
+
+    "jws": ["jws@3.2.2", "", { "dependencies": { "jwa": "^1.4.1", "safe-buffer": "^5.0.1" } }, "sha512-YHlZCB6lMTllWDtSPHz/ZXTsi8S00usEV6v1tjq8tOUZzw7DpSDWVXjXDre6ed1w/pd495ODpHZYSdkRTsa0HA=="],
+
+    "lodash": ["lodash@4.17.21", "", {}, "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="],
+
+    "math-intrinsics": ["math-intrinsics@1.1.0", "", {}, "sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g=="],
+
+    "media-typer": ["media-typer@1.1.0", "", {}, "sha512-aisnrDP4GNe06UcKFnV5bfMNPBUw4jsLGaWwWfnH3v02GnBuXX2MCVn5RbrWo0j3pczUilYblq7fQ7Nw2t5XKw=="],
+
+    "merge-descriptors": ["merge-descriptors@2.0.0", "", {}, "sha512-Snk314V5ayFLhp3fkUREub6WtjBfPdCPY1Ln8/8munuLuiYhsABgBVWsozAG+MWMbVEvcdcpbi9R7ww22l9Q3g=="],
+
+    "mime-db": ["mime-db@1.54.0", "", {}, "sha512-aU5EJuIN2WDemCcAp2vFBfp/m4EAhWJnUNSSw0ixs7/kXbd6Pg64EmwJkNdFhB8aWt1sH2CTXrLxo/iAGV3oPQ=="],
+
+    "mime-types": ["mime-types@3.0.1", "", { "dependencies": { "mime-db": "^1.54.0" } }, "sha512-xRc4oEhT6eaBpU1XF7AjpOFD+xQmXNB5OVKwp4tqCuBpHLS/ZbBDrc07mYTDqVMg6PfxUjjNp85O6Cd2Z/5HWA=="],
+
+    "ms": ["ms@2.1.3", "", {}, "sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA=="],
+
+    "negotiator": ["negotiator@1.0.0", "", {}, "sha512-8Ofs/AUQh8MaEcrlq5xOX0CQ9ypTF5dl78mjlMNfOK08fzpgTHQRQPBxcPlEtIw0yRpws+Zo/3r+5WRby7u3Gg=="],
+
+    "node-fetch": ["node-fetch@2.7.0", "", { "dependencies": { "whatwg-url": "^5.0.0" }, "peerDependencies": { "encoding": "^0.1.0" }, "optionalPeers": ["encoding"] }, "sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A=="],
+
+    "nodemailer": ["nodemailer@7.0.10", "", {}, "sha512-Us/Se1WtT0ylXgNFfyFSx4LElllVLJXQjWi2Xz17xWw7amDKO2MLtFnVp1WACy7GkVGs+oBlRopVNUzlrGSw1w=="],
+
+    "object-inspect": ["object-inspect@1.13.4", "", {}, "sha512-W67iLl4J2EXEGTbfeHCffrjDfitvLANg0UlX3wFUUSTx92KXRFegMHUVgSqE+wvhAbi4WqjGg9czysTV2Epbew=="],
+
+    "oci-accessgovernancecp": ["oci-accessgovernancecp@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-hs4Ag6xwY23LlUor/tofIkHzzazwWJkgUQIRTNn/U11khOCWE8hFFDxt8Btd3uEpvT+YW30o5OVqFf6yBAEaVQ=="],
+
+    "oci-adm": ["oci-adm@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-t0WwwF5ArBapMrfk0G9Ner8Y3gvjg8iqXhtG+NCnTIpiFX32LjIEPuJFvyAoONJSmJEvdM0VeeL1xJ4nBGB+EA=="],
+
+    "oci-aidataplatform": ["oci-aidataplatform@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-fZIApgArBb78+rF1oLFooo1DWHfZRo12O/WVD/IBkuDyu3fAOVzAvSLu5J3us9SgO5IFV4yZOBt+ExqxLnV5Iw=="],
+
+    "oci-aidocument": ["oci-aidocument@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-fwJ0kaKuKvB7/uV9xCr5lDfenDxtMnnZWZyyEXVRWWc4aPVak4UwAm6QH95fer6hNR9cgw+uKiRAUjZW3G+DuA=="],
+
+    "oci-ailanguage": ["oci-ailanguage@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-UGxwv7hILjDDyYkDuZV39FESP2Eh7AssqsMzqml75Xlglxs61/ImyiBGI29xVa6DYJKqQ9inRhNIjiQn3VU3sA=="],
+
+    "oci-aispeech": ["oci-aispeech@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-CeQEMuFunAK6B/z4jXnfXB23GJDQGVR171Rirsyrqi3cNFThxF2IXmc8J/eeU+KUjKlphSKfZbHql6N9m5DubA=="],
+
+    "oci-aivision": ["oci-aivision@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-uy3zNbgoG6zX7fv4gv6tLu1vivX/qySirEVBL/P76x04g8743hrqEPrDozmBxfCCbKPTXAzZjJ3oGHWMVmp34g=="],
+
+    "oci-analytics": ["oci-analytics@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-ac2EeVBncKcBBu2UW6tDYnCmBTMoF3nGNWI3zXLPzGKe+vDtaI4H/+4ZHs1jmRmElWr74FaJTUm+vAjorjWC4w=="],
+
+    "oci-announcementsservice": ["oci-announcementsservice@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-+0AmgKNXuoOYeWBRcHxUwqRQde1KErEdR4vqZJme4WS4mCcnruzzxitoinb1dNrcSC2UUlewuIYlK4m5Ze+cVA=="],
+
+    "oci-apiaccesscontrol": ["oci-apiaccesscontrol@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-JzORyVK+hf51H70TFhyiU3WVX3kNefhW0bxO7XsrIKNhDB17ci5rRZjTMTJ/94y2XYTdftopZMMn51ojgrAJXw=="],
+
+    "oci-apigateway": ["oci-apigateway@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-NpkY/7ShUjKeQH2MPeCKHY5aLhrz9GUDfyF0SUZy2d8oUjSl3mZPeeRwLccUTBHgr5FWFFSgJHG4BaGteS3dMw=="],
+
+    "oci-apiplatform": ["oci-apiplatform@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-UPuPlJdwJ9yvUp4h9OpS4jQTauXaFX9x/xPA5GmWxcAnDynJ5/sV3y50C6eKk/gu+N0+HcZmGKfsluXQL+513A=="],
+
+    "oci-apmconfig": ["oci-apmconfig@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-TCZzxg00wKE+1TsnB4vVAbMHBXg4HH008Zy+QMNen+A8q7Uuer1QHifgwuqa6YdXaKzQqfgu1PfjR2DPZ7v6iA=="],
+
+    "oci-apmcontrolplane": ["oci-apmcontrolplane@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-4gZpyioAaT+oXQJpVVdefjplkvl0JOBXYfMiWgQJzvd5/HVlqwQX50pVRAQNoopai92Xn+mdrNioGLHkO2aG5w=="],
+
+    "oci-apmsynthetics": ["oci-apmsynthetics@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-9TeLZwasg+Ewpd0DWkKf702wbBl3pBjuNvKI9supmXbbHWaLC9q8tWEoxsKsJBTtAqmB/U27sqZWCbad8HOQHg=="],
+
+    "oci-apmtraces": ["oci-apmtraces@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-87L0hPY3cF/bPmFtigTNjM2Rue9BUGxbJu0eYPk+/UN2fQELPOClfrX2dxm5lh6FJ9W0G7h2drME1oaZYUaf8g=="],
+
+    "oci-appmgmtcontrol": ["oci-appmgmtcontrol@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-L9b6ghEanLQfUjGUioD4zIJRXq9CzClOAQzFz7hLH2XEexDdItZpnbcs57WM9ibNszPS5p5NwPQftqKdkeOgyA=="],
+
+    "oci-artifacts": ["oci-artifacts@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-UXfC3wxR+ejy4iwSrn2cb+E7tC4O6lMbnvB+aENbpeIN6UEsksUDHNtRejdwnpQezE3oJIFvs2hcGrFNYLbFRg=="],
+
+    "oci-audit": ["oci-audit@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-WNk/byxMUU5mMxPj5iqmd/zpsuhlEmoqYDrSRFapYTZ7fd7JqYBJlBx16MeMKv/zpEQ7LTDISQd+kt+rJf5b4g=="],
+
+    "oci-autoscaling": ["oci-autoscaling@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-AXLyLuZvgG8s25ksC8uO+AGimCBxujbzPljNZ1ZwShLWtrfgHrKIEp2iqEfXOddHpq68zHqCgsqNtm0691PIsw=="],
+
+    "oci-bastion": ["oci-bastion@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-zAfGqztf3UBxp1l9vxeIcuy++Mo0OoOBPm+A6K72HHXvjbmDH8I1+z0SMGUmNm/C7gkGy7BlQIFJSzwjHQKk+Q=="],
+
+    "oci-bds": ["oci-bds@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-BnXl/MPKonWZI0xOcZS30xytsDt+WetCeB5x1onDV/l6kgx20zHP9HvcM6WRgCtp8TLuP2jXlqa/dbAe0m6J7g=="],
+
+    "oci-blockchain": ["oci-blockchain@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-uH8oBl7lrCR5x3WaTEGnyGJ+GzmtXwqy8Z1p+6JoqUVgCSuihJEJDLiQ8G1FWwZ3fFYCQup92tWAZo7ZiXGqSA=="],
+
+    "oci-budget": ["oci-budget@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-a4F/fgcRnSwWF6hPYYQCc67tAEp1A7LzbxVGs3jRtXl2tlO+SWJQ52CQLNW7AYD8dwKhgByWCBPKJdlJnskbog=="],
+
+    "oci-capacitymanagement": ["oci-capacitymanagement@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-r/Zk0C5MXZUucrc86GO0a2vNeLwB13N4ZRhnW4IO3Meiz1RsPS9+u+DCne4o6w7Ykqt8JK86YBnUTJZDE7IABw=="],
+
+    "oci-certificates": ["oci-certificates@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-efCvGvaAzT5NSbxlRmqSageID2XLS11B9xrC3FZLqA1SfASt6HyR99D9CN+CAedY3rLh3YF4jWyhymOmbApDng=="],
+
+    "oci-certificatesmanagement": ["oci-certificatesmanagement@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-M/7kY6Es0uQ/a79HezD5o02BVvYqmLDl38s/CMHXsXzor2AoLMs3lx/GnEFqKxZSziN1pEN4gMDvoGqRICfPKQ=="],
+
+    "oci-cims": ["oci-cims@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-27h/BfrrHuGfTkdsIYD4LDT2BgCxiUxyxBry3njB03WQlXIu55L2WqXd3B2J6ekpd3+nqK8yR4o8CxzYe3zU0Q=="],
+
+    "oci-cloudbridge": ["oci-cloudbridge@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-ACW4fpO6pCE0DMH9+nbGw5iPehDadvrYig2mdNw32qVwMnZOjZFoL4ZlIqm5MfjiILuo14jnqG+EmHOjpmjTIQ=="],
+
+    "oci-cloudguard": ["oci-cloudguard@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-flbJnJDXYzgBIWfAfiKozpeHczMJF9cutUr90aDX93DCSXKzVGxB1rWQTR37CcaMDFtuf3R76yDX8mT4pvVHFQ=="],
+
+    "oci-cloudmigrations": ["oci-cloudmigrations@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-3v0476bWzxONyYvK/jwY4NEn6QBR8WJTFozaZU7vH52ZBRo7gs4qRxvO+1FMZuskidT3b4m4atxgQBbA45xosg=="],
+
+    "oci-clusterplacementgroups": ["oci-clusterplacementgroups@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-eFYYJZ6chrmNlKinJdd0jPnQKDa7wUwJuPG2mUyvBPWPSFDzOhEc1Q22rFbERHkhZqPKnQBtreS4wcM1aB7Clw=="],
+
+    "oci-common": ["oci-common@2.121.0", "", { "dependencies": { "@types/isomorphic-fetch": "0.0.35", "@types/jsonwebtoken": "9.0.0", "@types/jssha": "2.0.0", "@types/opossum": "4.1.1", "@types/sshpk": "1.10.3", "es6-promise": "4.2.6", "http-signature": "1.3.1", "isomorphic-fetch": "3.0.0", "jsonwebtoken": "9.0.0", "jssha": "2.4.1", "opossum": "5.0.1", "sshpk": "1.16.1", "uuid": "3.3.3" } }, "sha512-oIkpu3Sayks50oAA8qxHms11AslaDmxwAKsee3OsnOzU20seejzs7oImFOGy7YsVVlovLOoA88ZV1U7VAeV43w=="],
+
+    "oci-computecloudatcustomer": ["oci-computecloudatcustomer@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-wQVzVkHiJbksoEl9/XKCUxgDsNFQzRDoQRWN1ehvl5uQDwejFjraMkt0iY2tP4T9OFi3SX8AcKSBrkYSIYmgjg=="],
+
+    "oci-computeinstanceagent": ["oci-computeinstanceagent@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-hFAuF+f5AM3JR1HnvDl4zSwkBr59Y8Ewh5Y4W/DpYWA6J553sUSQn6miVUtWsTSmkteVvGKP9RUNJy2LyXSVyA=="],
+
+    "oci-containerengine": ["oci-containerengine@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-Wf+1tJD+NWtnoZ9JK9dIpyQAUlk9p0n/se4ERGSCa3+2trycP1X5q+HJlmY6QIXQhIFIx9UdilqVgb+LgUP+Yg=="],
+
+    "oci-containerinstances": ["oci-containerinstances@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-jUh6TGTxtie68sdGvCj9Vj76ZUcSuz6/EcC3cudgJKd7mgNx1KAMPAfJQBpb0m+l3l0tnKgYdBWFehP3za2J5g=="],
+
+    "oci-core": ["oci-core@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-az5ZYMcNrBXZnCsnSPVVXz7pM/P97yh+qMDMkPyZY7AoC84MsOVNyNsEo+EPczotgCHJLXkZUQuOp3DEvLZOsw=="],
+
+    "oci-dashboardservice": ["oci-dashboardservice@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-AbkOEi5VKkmu7B3KatblBga9/x2CqGEAhsG6IFBtck/u3pJ/IDOUM+fYNBXO1X76JM+BSe+Xa7AVyX9Sr95mpg=="],
+
+    "oci-database": ["oci-database@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-e2HjXLiofnYxuP2SkqTfyQs1wFit1zyn0JW+Bih5C9f+7s07s0NbJ7R4C3U86I41+sNDaUilLOUxiqeAqZ403g=="],
+
+    "oci-databasemanagement": ["oci-databasemanagement@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-+aHPWaAjwUFd2CudYh9L+f4YcfqD6PO1gTPumeZQWDwNsspEi7RrTiiWvlrHhFpWzYflUXcGN4oXC2jvK4Sczw=="],
+
+    "oci-databasemigration": ["oci-databasemigration@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-RfscAXrLJu4dWpVnJI0USfTjZT4OaskCkx7Jc+21TTlvYRPnFv2h5V7gi2hvqMb3zExa+JSWcCvxWv7DF8XEHw=="],
+
+    "oci-databasetools": ["oci-databasetools@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-06betpaCfsnv0IZ9GzhCKOaYZxjOWo1ohqwQ4gDe+IkHrIsj/pu1my2plIWr6X2UYsc/IK1EqW0QubWoPRMxxQ=="],
+
+    "oci-datacatalog": ["oci-datacatalog@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-3H2bSjQJGDrsX8mpcSgbvEzMo0MBt958/u9st90QmbnftxNJzfO1gsEb61jmShGyzF+Je3cWkDHeukz1EX9Mgg=="],
+
+    "oci-dataflow": ["oci-dataflow@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-MJGfcWsyhMBNyVMz2bgSpI7gDmeZaYZwLzGwcq5oKD7mGNEE1LhlLMECQJ6xuei1xhrceDtzvb2Hx6FOGs/zBw=="],
+
+    "oci-dataintegration": ["oci-dataintegration@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-/SwAzSixuNef6iC0F/rFcrteAS04cAkmRze4tog5utQLsxkYoR05uTgnodwh1Ql2enSLqJI4ncHnunwIZOkOpQ=="],
+
+    "oci-datalabelingservice": ["oci-datalabelingservice@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-QpH1FbNwYRmDXvkQU+a3MEHjrzejKT6SRWvF4SzgGfrrwq7bItbmsHqBGi5XB8Kr1TyXc65Tr3iTuuKmh9DCLg=="],
+
+    "oci-datalabelingservicedataplane": ["oci-datalabelingservicedataplane@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-YuyyNwh8FSkj3i+9nwEi0xF7y7xLUIM8oZM4t+VpdQm/AhpxQSMV+roH80hGHPHSCp9EYR4AbgBoWV61SHAfrw=="],
+
+    "oci-datasafe": ["oci-datasafe@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-JTXKX953DpjpsGbeB1JXvfAwW5lchTk/8HhGzvQDS9QiR9P+JNDL1rZnSZu/bA6uvT4Si7Sccrz+p+0L5w6B2Q=="],
+
+    "oci-datascience": ["oci-datascience@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-7yDDMU93Mqge9WiXoqpaP1+YwmrqzthLzyRASFgSRWVrnhPhGAN8+HCXF1H+LX1M1tnzl+vFkqL1Bhg36KDomQ=="],
+
+    "oci-dblm": ["oci-dblm@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-joON4PcO+cRjj15vUQ82jb3y/vrZBhpJV+P0QtSichH3fFP9DjRdt5Kn/tmUDQ/hn21Wg8jrbu5BhgFVcA9I9w=="],
+
+    "oci-dbmulticloud": ["oci-dbmulticloud@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-kSfcuAYQ8WP68pGF9sA0zxcqmMXFFNq7OzbOc7NjqoBrg66jggZIe0onHHiC8kkxVoe6vAoDAco9afLPreHNmw=="],
+
+    "oci-delegateaccesscontrol": ["oci-delegateaccesscontrol@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-ggiJADBSrnHesua38CWmNUvf+cX9tUu/Zh3Au6l+vewBWjcjhODGcNrubKYKqiNEOvK5KRwdkZxQypyQYAR7hQ=="],
+
+    "oci-demandsignal": ["oci-demandsignal@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-JTkwXLn8pTA+iLyD8O0hsNmP03zgl+aQRfGJ9FTtnGWV1fOz9aWab+5udylv7EpoxS/Tkmj5lnLIJsx5D3rxgw=="],
+
+    "oci-desktops": ["oci-desktops@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-w+5/s9U0rv//7cJnnQi+5O2SevP6zkrCQ6uNcrqx8VyhuccStXHCStI1GJ63yjTpxQmXcZ5XxpNh+FE3JjDpLg=="],
+
+    "oci-devops": ["oci-devops@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-f1GHtXi4bI6TF3t1PRMR22damHrhlpsDjB8j4MeZ2KqJQpt02fbiyyJSZELm40aLwYWAAFp0LMz+ArYeKaxqyQ=="],
+
+    "oci-dif": ["oci-dif@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-XqybPl3x41Te7OH16lvrZcfXr00uUqkKRh9BL6WObkGYoxCN5rt7zVCaflk0nehY/sqZOhd4CfliB/LlwWYB2A=="],
+
+    "oci-disasterrecovery": ["oci-disasterrecovery@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-y7/EAwmESvi9/i8uLBctEGmrACrChA1wnPF2A25HYaIRBctqySid3bUS0juKaVLBP/xjeHQdNJSor3GcMv3sSQ=="],
+
+    "oci-distributeddatabase": ["oci-distributeddatabase@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-gVkoeLZAweiTrgTIyqUM/IPm2ATvQn0sXOY+Okextjd/nI0/HPxqdJ/8IQiok306OQr05svQZ29crUBQsaZPjA=="],
+
+    "oci-dns": ["oci-dns@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-NcFutntzDDdLAvmN6C45qA0HVx1xGh7CzEapaL6xYGUX8AavkPN9i4aDzaazKHcawrVRDdgpYlc+OANKdeZPmg=="],
+
+    "oci-email": ["oci-email@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-auWjmnE72NOucFDaftIr60ZNZrRGPKX6sxw1uiE1IUHrfFIAG2tGZjIp6Gu3xlrE5F6owbVVouZzUdRzizrE5A=="],
+
+    "oci-emaildataplane": ["oci-emaildataplane@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-2pDmM8P8w2G7a9ubyIcHRBLi1yTepLb65DOsy5v9Md9t+mwbOlwjs267o4bPGqT94e2VwZ1nJKHzfW3ZT6g0Fg=="],
+
+    "oci-emwarehouse": ["oci-emwarehouse@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-CU6r9LM6wDdDMIIluWUORPejoV0KSvEShkMmHUaeTAnbpTDR0xc6wIsuiehIIf/HSGuqt8zYjxJmjhguwqQXMQ=="],
+
+    "oci-events": ["oci-events@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-7b/yTN2soMyBTMLD3UhyjeMXLa3Sv5/97RhVEoeiTQNrqJ1MtuWY3goff5zyStUQBm1tzKQzyhPOlCYfLfI4qA=="],
+
+    "oci-filestorage": ["oci-filestorage@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-aLM75UJ/Mke9zo2prs21NuJVSEGRIA65CtlGO4U3MP2Qv2XcGkYISMcEuWY/GwTO/XgCK4X1tFKwZQzsf+lVJg=="],
+
+    "oci-fleetappsmanagement": ["oci-fleetappsmanagement@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-ZPWn0SSzs70rW0KSA19ti1bIwFB9plyPxb9hoxHi/aCrlcZqfbSofctj7q8pyU/l56GdTEk/FA40kIFCmmtidA=="],
+
+    "oci-fleetsoftwareupdate": ["oci-fleetsoftwareupdate@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-wXc2gIcXXVfoRaEJuJCqyZoXS+8M3qH+FeOeIkJWoq2CztDqs54i7j3UPsF/we9vRDtch+kjhdc1oSxU3GFQaQ=="],
+
+    "oci-functions": ["oci-functions@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-27xc56O3n5B4QXG6jtAAdrBl/lyJYT3mYevQBh/2p+HrdIJxeTzHubfv1Ify949TJyEY2abcXVxjpq6mayMG5A=="],
+
+    "oci-fusionapps": ["oci-fusionapps@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-tv8mChfEWsrvb/zHZ68tw1gLwoCbm3LULjx1H96+orRkm030nhGSasBHS0+QcWBw5NZYtgoGBcuWj1HFo40gMg=="],
+
+    "oci-generativeai": ["oci-generativeai@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-5xGJ/dR3Y7Kx6QKAf/y5hrY/m333/m3awwbV4zLTiWgA5JeDXXon4nAD8YYFxJZl6Ovc/Xk2ghTUcZpdIcPcDQ=="],
+
+    "oci-generativeaiagent": ["oci-generativeaiagent@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-vbi8h+lpy5JX/FpmxMoT5T0l7NKi9cY83r0hp46nraa3NSS1CnFgClIUXUKEHUjXplvjZ/Ji50JGK56SSAkaWw=="],
+
+    "oci-generativeaiagentruntime": ["oci-generativeaiagentruntime@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-+mpqKPuEDy3sEUFOrlNeqFPjBGSoCIbELJArskZ8B0RjTemOT+FZa3aamBkUt7P7OXQIQgpJGd8ehWgRT/n/xw=="],
+
+    "oci-generativeaiinference": ["oci-generativeaiinference@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-fdNMb2TBqFrviYaUDrcXsnEeo1VXriol0au7xLdXqxa3xOw6pDqJ/lJJCIbMJ6uECpVH0VbEqsKuiFIpL/PUeQ=="],
+
+    "oci-genericartifactscontent": ["oci-genericartifactscontent@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-FfLO3VzQuJEer0n5FBw18Sju4hcCrk0D0rmaH9ggXFsXo1fEtcL+sSyZM9s4pbv8EIVfJXaLn26ix61IM22StQ=="],
+
+    "oci-globallydistributeddatabase": ["oci-globallydistributeddatabase@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-tasMq/1USONMC1Y4EyT31Fz+OoSZqWphtrdE7ug3kpX1L4wpm8CdX8Xia0Bvz/t69hreuQnirHQDveJ2jAHAuQ=="],
+
+    "oci-goldengate": ["oci-goldengate@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-xN8AGPHC2DAxcJjOCJgzI8Hl53k/8yFMH6OosZ0i+RRsHaQZCm3SciQ9+2K2dbBp3CRzoScvfCPsAX9gyeCUbg=="],
+
+    "oci-governancerulescontrolplane": ["oci-governancerulescontrolplane@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-PAbLZNeEgXxH7MVVx9nFyAjpWvPm5yrh9v+GVK1iTjq3lLC7qNRnsjcz0N4I2caMfoVPLdjZmhiZQ7J5eWgcxQ=="],
+
+    "oci-healthchecks": ["oci-healthchecks@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-y3/DDeTK5oJ77SAXce9ouVyYeCeHoDD/zFPdziA2aJFONB0K+9uJX98Mb+wa2yNELZZ+zT1RPoLyA2vpebAVtw=="],
+
+    "oci-identity": ["oci-identity@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-ro/YV70whytANATJE069nZmtc5MTf9JJIw7XchBDN+g2ep8aCmXZbTVZ29v0DEUrY3eY0pSNHxpM+Yji7r40hA=="],
+
+    "oci-identitydataplane": ["oci-identitydataplane@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-RtzMtu5alhkByL/PdNsJsrFE5D+yZX/4YkzCY/AjctSmvJHXGihlPBLz8nZ8umRvFEeZLsXlUJxc6CkmotG1YQ=="],
+
+    "oci-identitydomains": ["oci-identitydomains@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-ffAqC6+dfNKe27p54EP6xOD9TqbS2ICEE1BuexIf2iToiJfHB3iC5LGcStmZ/JzqJjQ+4XWjfA3+K0p6ouXAng=="],
+
+    "oci-integration": ["oci-integration@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-PH3etmr127MoxB3b17xLoL/xr4B4yzvz+PjtyTR2u/FqEmI5V28WRIaJ2Vndaznp1QJWYe/VWnFHFMCl1b0LcQ=="],
+
+    "oci-iot": ["oci-iot@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-fuAyKMGBbYm58bciaantjeE9PepjenGCKUplPaN0f2C9ozEwBzAnedMGelG676OpWT7/DLD7RfP0AJAg+yIrhQ=="],
+
+    "oci-jms": ["oci-jms@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-ecVmm/25C/w3bd6Q2zQCBeut3bBxDCGEwuZ0TgBhwkTbe7FP7bM7hBNXpmJ+/o57nIsZ3FdzfEzPDwzIru4B1g=="],
+
+    "oci-jmsjavadownloads": ["oci-jmsjavadownloads@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-5zJwDsWQIRqiz0AWPohbxWoEslmmlemPZDtkygB7g6Dru2IBYchpp2T0P8cW3Nefr95Q/GFJVzfMDI0ajsgaZg=="],
+
+    "oci-jmsutils": ["oci-jmsutils@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-zKY8yvkiLvtnE+gyuMZjTzjp4swbztN8+MdonzIQh1s2PvvqhOI+7kQFEmD3+vjRTMUIGGAjuyP9te5ZUilmAw=="],
+
+    "oci-keymanagement": ["oci-keymanagement@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-8EfkNMLMfVj4F2fciLvZdir+/rtLybLaRtI0HUgo3gcDazuUzGluoMZWiV+SgqNvlt5MVy2xBZTg6QIR4uVZzQ=="],
+
+    "oci-licensemanager": ["oci-licensemanager@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-rq56r2NDVdsC0yWG47nCh8pG0VZZdqf4GJhR+nCCuicahss255H/iL4WCXnhnpTEZe9Fy6m8UNEGappUBkIOfQ=="],
+
+    "oci-limits": ["oci-limits@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-lEsK43k5yr46Wrf8Bcmpl8fS1MZPRWmI1HbnkFsWFbQRvWbQNEq/BiWyemYyiLD6f2Hl8+tNCqodvLufu0dBsw=="],
+
+    "oci-loadbalancer": ["oci-loadbalancer@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-8HLVdwxSqu4d7gaArzAQ6cnMAxSfQCIv88bIRwc96rDoZDDLmEVskXUTwu83q76kAsqn5ED9L/XEonv7uyohRA=="],
+
+    "oci-lockbox": ["oci-lockbox@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-VWzDhWkAQfs1d29p+c8Sb/JVEGcCq0yQoqmKwbvjDT3lTsb7j7Av7eA96qw9AiPAG6DO93buUu1kzl1FLdt5jg=="],
+
+    "oci-loganalytics": ["oci-loganalytics@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-iI3kbwpN24GOcxdiiSdo1YoUlTKk+xdOYXEGODnTISZuVGFzWXSRPkIi7ClPb9cZd/5XcSB0KpCZaSXkC1QZ4w=="],
+
+    "oci-logging": ["oci-logging@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-Jrww2osD+BEoQuTveZHrXentw1jVxEon1ydbkYjkKh/N8+MkdrloSVHuzmjzD8+xZC91R0Ur2d6Dc0kexnH3Aw=="],
+
+    "oci-loggingingestion": ["oci-loggingingestion@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-OgnXxyyNth4szZ2yOupa+PHBy0E5MtLeg/Wa9Mwv327TIPGD7c4BIFmW7/5aTyqbNvZM3RWhzGBTFdO9GmWUfg=="],
+
+    "oci-loggingsearch": ["oci-loggingsearch@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-+AKpQvniln71zSzhW6lC0bizPj1zOHvktdD2XFmvRRc3CGQCiKD6thSP09dw6jkexZaLergJCU1WLUYvkTVL2w=="],
+
+    "oci-lustrefilestorage": ["oci-lustrefilestorage@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-9+KHzHmbZfG+ZYmNHA5UQOHmjdARZARy6PzGANX3h2HR3SyEKffsGtUrUMtKPnmLwmtjtNm4eMJVZSSstx2LeQ=="],
+
+    "oci-managedkafka": ["oci-managedkafka@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-6W94D+oIL/MHp0bl26YMA0y+N4TIzmTYMcQQQlNEy/5VNNzku8+pAV1Bxvg8UH036T72cVkKoA4eXciIVxI73w=="],
+
+    "oci-managementagent": ["oci-managementagent@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-4dnZqCGSmcxiVSzATUx8BiyIRq2b9oiyYVwrUU6K2KSjug8nNpTPyR3fPpJmEhwCLtDOJC5QnEOXtgsk6WGVPg=="],
+
+    "oci-managementdashboard": ["oci-managementdashboard@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-BS6hauqTKtgRsZhi6m//l2/rd4fRwwLcpogGQLbUfjIj+crqm0X9ce5GFMyRxSVWgrHmmkVCn2IdAPr9nB054Q=="],
+
+    "oci-marketplace": ["oci-marketplace@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-Gt+8GBaUd7DoiU5c2ceEaIZLGnsZ6tcvC2bXRIj+zDlGwFXsKGKAHEbGNCHgsjkOdOy7zi1PJXDo0Kfi653/jw=="],
+
+    "oci-marketplaceprivateoffer": ["oci-marketplaceprivateoffer@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-jPNMHnLOaH6V99AajwuFZSxgQ8cGSYjnvFmFKENAlajl5CQrbHyOvJCxgybPYFMYBHPj8ocQNcSk9jVhcnoUfA=="],
+
+    "oci-marketplacepublisher": ["oci-marketplacepublisher@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-braUSPCUpNV27lk5elcMLX8ju1EbNFkizp7GQ8nl2EGjdr0sViHDtrqPBBBHHjNEn7SJGQzwPEOI002mJUCjCQ=="],
+
+    "oci-mediaservices": ["oci-mediaservices@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-Fw0Z34pHpVXwOKqsx2HZP3aDtpZHrYQoyKrbS5wNfqAxJgdMMijylBA39/K5IdIc59eY3QVi83M8pCblFkR8mg=="],
+
+    "oci-mngdmac": ["oci-mngdmac@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-rZNmeFlWw3sqO5d8rBP6a7fTBXceb3qPmrwqrIByVjgqRDnzX5WMkp4f9cIQ0XxLZrrXbV72FUA1pAVLnqr8aA=="],
+
+    "oci-modeldeployment": ["oci-modeldeployment@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-dk0WwNNf6v49pF5lzRkhBNz+WM3VaL4+wJ66MTLHXe4rZjDkVYbMy/MLOQfqO2/czlbrXIrjmlVsWQciLEPCwQ=="],
+
+    "oci-monitoring": ["oci-monitoring@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-y+CBSEEmX/8DG3F05VYgGqJBm9tu9gBIa38w+dxMnW/r9d2Ew96fKARGvGRqR5hY5bX7DROVIv5tpZcMilxkRg=="],
+
+    "oci-multicloud": ["oci-multicloud@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-ikCvC43s5GmYrzUOEWV+hxa0cRc1AtbKAIXpso5YZCho5cZqcR3iw1LmEscxyUsbWWWuUlIQMzKFbjdx8fQCQQ=="],
+
+    "oci-mysql": ["oci-mysql@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-KNB5IcB15pkPgmuRC1wGmNAURoQ6ospDM4cQh/50twiit6IrrcZBqEsASQy0jSXyGozo9yJqfNx/I7S1jqx2tg=="],
+
+    "oci-networkfirewall": ["oci-networkfirewall@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-Y3NXvG5GyzyYNUTyP7R83O7rOwWbMDpZs4atPQSAWPpyxg/H5jOyj1e4izVG3v2j7T7jJselq24IiYVOOuXU1g=="],
+
+    "oci-networkloadbalancer": ["oci-networkloadbalancer@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-azaGz+IVjiKAwi+7CKcipfRT5ttPeGXp/JTCJpAEI0yuBOkJitrNkgpNofMAT2VyHLRDOwYzIU2kLrL0pCGL9Q=="],
+
+    "oci-nosql": ["oci-nosql@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-EY01FCLo74QEKKxSZpeDoSXDQlhfnsUU1LFR4IkTef7pQzbm32r6ysB0qI2hMxYglN5a2bvk0BMQA+Wd4nrlZw=="],
+
+    "oci-objectstorage": ["oci-objectstorage@2.121.0", "", { "dependencies": { "await-semaphore": "^0.1.3", "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-Af0nPNx5tgD+UHTvfKZPxqD/t9gi0gUXffYtz3iHq26F1A+cFgtzBrESPJRNyETMjDYWc2bd/bHlgMPwjlrEqQ=="],
+
+    "oci-oce": ["oci-oce@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-MfI94mLA1M36Bq7qRRsiNlKBAUsr8ZausSoOzL/RZKWF2yuo04RHjt9ku433+R7zYEGfeqU/ZoZPb+b+fekoOQ=="],
+
+    "oci-ocicontrolcenter": ["oci-ocicontrolcenter@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-u1geB9lbLOMNxEwGVf9rquxIPmfqq3ZK/eaIoxWH/xl76ojC+0zm6oFbqMBJM/SIlYLA1Z+RqFqbqDYxknPKIg=="],
+
+    "oci-ocvp": ["oci-ocvp@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-4QKDKtdD0Rh4S33Z7QQiuzIDgTf4k6ji4gXz2++FXrMgDh+B483YqzVn5G0jAPmn9JIfgKKJt+n8T67ZAt8ksQ=="],
+
+    "oci-oda": ["oci-oda@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-v9B3l/qhTGzKfjAvq3BWTLRfvHf8xw/xtiv7aJtkMylgJE2AnqnQQM70tmnQw+JU1X9UNHMDEcZP6FbFYXbSYA=="],
+
+    "oci-onesubscription": ["oci-onesubscription@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-iHsdurKhk6IiXJ0abuER63aJU7oHFjZjft/aW7mOTTy1+RE5htcEdwQtSMGp1YwnWCO3Qi1ayv5Xi73SQ900iA=="],
+
+    "oci-ons": ["oci-ons@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-2TZGfMqumPzZDR+mJWi2+8GMLaULTMvIG74lrL6K+zZcfBMInEJyrxMIBR+2tc/128ttO5DG4lL947UQxPTz7Q=="],
+
+    "oci-opa": ["oci-opa@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-TrmZmw8i+Js3qc+DRrYaiaDidhe6OGTEtW0Vtc+bBoZcxLcxE/S11DMKfvrPmyJuAW0xIrvvij5HjQ0dTkIKkg=="],
+
+    "oci-opensearch": ["oci-opensearch@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-0o/UPi5LJEWSNiz9Tn9n/fOSdGGziSMUFuCDmKMq/cbTYDQ8JHhTnFfM6MWtTDL0SIoUeDrCdMPe+lMl1kz4zA=="],
+
+    "oci-operatoraccesscontrol": ["oci-operatoraccesscontrol@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-nCrPD2xGw7wLhCnETIhN2H8vAkn+yyBt2dKlrN1HdszwtH3ykBAQllf7++NLKIHMKqu5U3ylUuHrZmazBa1i0w=="],
+
+    "oci-opsi": ["oci-opsi@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-Z/9y/gGTstjid4Os2bI1QUcOk7uOdFXZT344tl+p4Zf/XYZrDbnEPrNeCi2cB11FqDQEdKgJg5FuEsi15mdsGA=="],
+
+    "oci-optimizer": ["oci-optimizer@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-MNDfvQ6hZkVzFiN2F2f+CdBQ8a73PdNC94Ye8ONZy3Zl6I6It79Hil+ixMAr27h8PUJuHxmMCd5x6iKqLRaArQ=="],
+
+    "oci-osmanagementhub": ["oci-osmanagementhub@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-+IaX4nx7Jt58WIPSCcrWSksUv1p30AUusS8UC5nTJL+9JaR6y2gA7XcLzXsLNXcvWMPvVlH0oag7oNen5Lnpyg=="],
+
+    "oci-ospgateway": ["oci-ospgateway@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-4im6+csHTHotOJyYbkw4Dd3QArn4S6sAMmBAbXW1ruA7RW5LCQYMeiUBWMWj54e9OmuhoVZd2s1mR049NRZSpA=="],
+
+    "oci-osubbillingschedule": ["oci-osubbillingschedule@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-l5ZkzoCNrClVxsH/MWbFWEL9ULwOEEEejtuI7RLazHcDxBRKo1/nJ0tmEvmGMz5XTrozR1FEN7S4zDhs+Pfafg=="],
+
+    "oci-osuborganizationsubscription": ["oci-osuborganizationsubscription@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-vVuyQI07stT3rZzOCtAecC0+gg71mP27V6+qT+5ZEjcSCNm0dfYjXKgX6C5irxoRjUMgq8OPQMfWe1ZbrEUWeQ=="],
+
+    "oci-osubsubscription": ["oci-osubsubscription@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-741yLwuxm0RAwWvyANYZf3nVhPuDh1sEE9Vv+I9cn0IaYYPIWZS06FaT+gPJJtQsKVSW82dklgDo683o+U96IQ=="],
+
+    "oci-osubusage": ["oci-osubusage@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-iLxRxsMtgEcSIGGHkWespjFNNiXjFagNSHZOBNz0MixnoukJvIehsvAEvf4CkoF3/mHPLeDaIMp3uVfmdWApnQ=="],
+
+    "oci-psa": ["oci-psa@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-vjbSz3JfY0w6uEsH3UaowF+hMAaRar2gPoeEBFWwuQaAp0a3i90zVtf/5Im8S2jTbD0gMnV+XhsgOwZCiH+i6Q=="],
+
+    "oci-psql": ["oci-psql@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-gJ69pkvj2/5d4x3i9RQuR810yO4/eU0kISuQ51J5WdLN3bB8oldRZbQU7tYySf3VAkllkhBPusYbsMqZBccASw=="],
+
+    "oci-queue": ["oci-queue@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-9MRRKKtWVChz1XQ91PdFa/iobGGTX+Qoeh3yA6eDaj/l0drh9mAlw6qzwZlBqtPU2Xwgj7+UT4PlibzIU1pFRQ=="],
+
+    "oci-recovery": ["oci-recovery@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-QZ9rcSYVJ01qv4l50akQeMqTpcUk123zwHyrXKbStdbzMavPFzstKKdvBzY+aYeMz6OsOJ70DXUkwOyKy7tYAA=="],
+
+    "oci-redis": ["oci-redis@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-zqSBAz+HAGnhEgvJbbhdadLldHovr87nn8PJD8S6xdJNBPwsXJlfBAETxTVbuT1A+oP04Dr9YEma7+VsQG6eXw=="],
+
+    "oci-resourceanalytics": ["oci-resourceanalytics@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-GRjrSm1L3bPqD1IvR3CVgfwZ8AtrFoxgbJ/eGRYxaaSw/5o/1uKej+eQgP5DbSu1kv6mGzOFljF9dTNDouqwFA=="],
+
+    "oci-resourcemanager": ["oci-resourcemanager@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-kvIIBTn9AR3YwVe2A5s+3ODDEOCc/CeRxY4LNziSwdJnxQjG/moyvRezn2xKzR6AZ3/ykDSIeeYuw/hho2DDgA=="],
+
+    "oci-resourcescheduler": ["oci-resourcescheduler@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-pYygwFPkUGaxH8EWv8OGH4E1S8nxqm49Ye66vWFwK8PO2I1zI1FqRIaRxtS9NtnNHmCLXLgBFx4gArca2tb8iw=="],
+
+    "oci-resourcesearch": ["oci-resourcesearch@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-72WGyD/ZRsEreLmQfGlqggn0kTxL39R4JmrxChHRLyihPvDLuw1X5YgI54Wz+Xb+q+Xn3Iq+ULgOxZqO0a41Nw=="],
+
+    "oci-rover": ["oci-rover@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-gGxijwQfepxIhI2GKWos8R7jZFIz6zO6AX6lXCL5I/fkGZSz6hRLpcGhlhemAd/k54A8urEuv8d4tQtCbH2D9w=="],
+
+    "oci-sch": ["oci-sch@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-1zDzeYQUbBFs5+JqLmDsStif6SKAIkQ/Wb8j+pf6Njdlvwl9k19zG89kQyD3V6QlEC6RFHEslVnUPdGqux+p2w=="],
+
+    "oci-sdk": ["oci-sdk@2.121.0", "", { "dependencies": { "oci-accessgovernancecp": "2.121.0", "oci-adm": "2.121.0", "oci-aidataplatform": "2.121.0", "oci-aidocument": "2.121.0", "oci-ailanguage": "2.121.0", "oci-aispeech": "2.121.0", "oci-aivision": "2.121.0", "oci-analytics": "2.121.0", "oci-announcementsservice": "2.121.0", "oci-apiaccesscontrol": "2.121.0", "oci-apigateway": "2.121.0", "oci-apiplatform": "2.121.0", "oci-apmconfig": "2.121.0", "oci-apmcontrolplane": "2.121.0", "oci-apmsynthetics": "2.121.0", "oci-apmtraces": "2.121.0", "oci-appmgmtcontrol": "2.121.0", "oci-artifacts": "2.121.0", "oci-audit": "2.121.0", "oci-autoscaling": "2.121.0", "oci-bastion": "2.121.0", "oci-bds": "2.121.0", "oci-blockchain": "2.121.0", "oci-budget": "2.121.0", "oci-capacitymanagement": "2.121.0", "oci-certificates": "2.121.0", "oci-certificatesmanagement": "2.121.0", "oci-cims": "2.121.0", "oci-cloudbridge": "2.121.0", "oci-cloudguard": "2.121.0", "oci-cloudmigrations": "2.121.0", "oci-clusterplacementgroups": "2.121.0", "oci-common": "2.121.0", "oci-computecloudatcustomer": "2.121.0", "oci-computeinstanceagent": "2.121.0", "oci-containerengine": "2.121.0", "oci-containerinstances": "2.121.0", "oci-core": "2.121.0", "oci-dashboardservice": "2.121.0", "oci-database": "2.121.0", "oci-databasemanagement": "2.121.0", "oci-databasemigration": "2.121.0", "oci-databasetools": "2.121.0", "oci-datacatalog": "2.121.0", "oci-dataflow": "2.121.0", "oci-dataintegration": "2.121.0", "oci-datalabelingservice": "2.121.0", "oci-datalabelingservicedataplane": "2.121.0", "oci-datasafe": "2.121.0", "oci-datascience": "2.121.0", "oci-dblm": "2.121.0", "oci-dbmulticloud": "2.121.0", "oci-delegateaccesscontrol": "2.121.0", "oci-demandsignal": "2.121.0", "oci-desktops": "2.121.0", "oci-devops": "2.121.0", "oci-dif": "2.121.0", "oci-disasterrecovery": "2.121.0", "oci-distributeddatabase": "2.121.0", "oci-dns": "2.121.0", "oci-email": "2.121.0", "oci-emaildataplane": "2.121.0", "oci-emwarehouse": "2.121.0", "oci-events": "2.121.0", "oci-filestorage": "2.121.0", "oci-fleetappsmanagement": "2.121.0", "oci-fleetsoftwareupdate": "2.121.0", "oci-functions": "2.121.0", "oci-fusionapps": "2.121.0", "oci-generativeai": "2.121.0", "oci-generativeaiagent": "2.121.0", "oci-generativeaiagentruntime": "2.121.0", "oci-generativeaiinference": "2.121.0", "oci-genericartifactscontent": "2.121.0", "oci-globallydistributeddatabase": "2.121.0", "oci-goldengate": "2.121.0", "oci-governancerulescontrolplane": "2.121.0", "oci-healthchecks": "2.121.0", "oci-identity": "2.121.0", "oci-identitydataplane": "2.121.0", "oci-identitydomains": "2.121.0", "oci-integration": "2.121.0", "oci-iot": "2.121.0", "oci-jms": "2.121.0", "oci-jmsjavadownloads": "2.121.0", "oci-jmsutils": "2.121.0", "oci-keymanagement": "2.121.0", "oci-licensemanager": "2.121.0", "oci-limits": "2.121.0", "oci-loadbalancer": "2.121.0", "oci-lockbox": "2.121.0", "oci-loganalytics": "2.121.0", "oci-logging": "2.121.0", "oci-loggingingestion": "2.121.0", "oci-loggingsearch": "2.121.0", "oci-lustrefilestorage": "2.121.0", "oci-managedkafka": "2.121.0", "oci-managementagent": "2.121.0", "oci-managementdashboard": "2.121.0", "oci-marketplace": "2.121.0", "oci-marketplaceprivateoffer": "2.121.0", "oci-marketplacepublisher": "2.121.0", "oci-mediaservices": "2.121.0", "oci-mngdmac": "2.121.0", "oci-modeldeployment": "2.121.0", "oci-monitoring": "2.121.0", "oci-multicloud": "2.121.0", "oci-mysql": "2.121.0", "oci-networkfirewall": "2.121.0", "oci-networkloadbalancer": "2.121.0", "oci-nosql": "2.121.0", "oci-objectstorage": "2.121.0", "oci-oce": "2.121.0", "oci-ocicontrolcenter": "2.121.0", "oci-ocvp": "2.121.0", "oci-oda": "2.121.0", "oci-onesubscription": "2.121.0", "oci-ons": "2.121.0", "oci-opa": "2.121.0", "oci-opensearch": "2.121.0", "oci-operatoraccesscontrol": "2.121.0", "oci-opsi": "2.121.0", "oci-optimizer": "2.121.0", "oci-osmanagementhub": "2.121.0", "oci-ospgateway": "2.121.0", "oci-osubbillingschedule": "2.121.0", "oci-osuborganizationsubscription": "2.121.0", "oci-osubsubscription": "2.121.0", "oci-osubusage": "2.121.0", "oci-psa": "2.121.0", "oci-psql": "2.121.0", "oci-queue": "2.121.0", "oci-recovery": "2.121.0", "oci-redis": "2.121.0", "oci-resourceanalytics": "2.121.0", "oci-resourcemanager": "2.121.0", "oci-resourcescheduler": "2.121.0", "oci-resourcesearch": "2.121.0", "oci-rover": "2.121.0", "oci-sch": "2.121.0", "oci-secrets": "2.121.0", "oci-securityattribute": "2.121.0", "oci-servicecatalog": "2.121.0", "oci-servicemanagerproxy": "2.121.0", "oci-stackmonitoring": "2.121.0", "oci-streaming": "2.121.0", "oci-tenantmanagercontrolplane": "2.121.0", "oci-threatintelligence": "2.121.0", "oci-usage": "2.121.0", "oci-usageapi": "2.121.0", "oci-vault": "2.121.0", "oci-vbsinst": "2.121.0", "oci-visualbuilder": "2.121.0", "oci-vnmonitoring": "2.121.0", "oci-vulnerabilityscanning": "2.121.0", "oci-waa": "2.121.0", "oci-waas": "2.121.0", "oci-waf": "2.121.0", "oci-wlms": "2.121.0", "oci-workrequests": "2.121.0", "oci-zpr": "2.121.0" } }, "sha512-JFFX0CXpdY0zX1vh/9AfxM8+ilhq626Mi5fJXs+lQJDfqTGSSBbKb1DTGMvk/edDGjTx5IxmDXlscXhjS/ReBQ=="],
+
+    "oci-secrets": ["oci-secrets@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-PwXYnGEpqlPBViu+LS6HqrlsyIC08pB21Hp2amCocub2WJQJ88wwPtgrkI8BIjkNsC5gQN2A6Yv6f5jdfB35KQ=="],
+
+    "oci-securityattribute": ["oci-securityattribute@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-fhd9RT6UqFvOu8oMVC5kOEV3XWKbKTx/RKt9jPwc6+pwiLN5l0+p3Odk5AfYXQbM4rZIaCQzGwebhkdy+6yoTg=="],
+
+    "oci-servicecatalog": ["oci-servicecatalog@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-Q8zA00MNilwj2m0Js/msLtNrSY3gIUWb7pwrf/5bSJvQn+uWdkSkrhCWkU3DLno5hvq4SyOv0mMQSTHjg6nVIg=="],
+
+    "oci-servicemanagerproxy": ["oci-servicemanagerproxy@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-jK+6NKyPnvgjGfaG2H+daSDzAfua4bXC+rkILs1bEIrY51e+C2XVP9H0LZH2OyoS8nBaBqsvswRLHtIv9AvzAA=="],
+
+    "oci-stackmonitoring": ["oci-stackmonitoring@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-9ADJdYwQH6szZE2RIOYri9eQiLTbOrVMv2lsMP5P+jJD4MnTYgcwNOI7TXvtV99pZooEQu36IdwV+9xHXAIgaA=="],
+
+    "oci-streaming": ["oci-streaming@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-uwU/Js+ibB2e8rrnfL0OYxj4WHnAfWdePf1Q/0gMXcd/ki19b7zVBRu0agpcanOKceEGVudEZtgujuVp6kcdMg=="],
+
+    "oci-tenantmanagercontrolplane": ["oci-tenantmanagercontrolplane@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-LebbtXBaItLUZuzUdJPpgf69jpI8s/DebNa6iOxxVGTanGUcPjv5+tO3vAMxjtsC9Dsza3JWXdPk+TydhAMudA=="],
+
+    "oci-threatintelligence": ["oci-threatintelligence@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-83d0E0FE93XXBcY044gHLNIOzaOQuN0P+dm/Fuu9eC4TfuQU1gqJ91YdbQhBn9RPK3e/7WKGOmv833MgZ0n/0g=="],
+
+    "oci-usage": ["oci-usage@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-ZphYGSY8wWFRokLUDnq3orRB/wi+027XC0g1Rrr6DUqm7L3EuN7YJ+VG5ujG3+VgH8uJkKdA4aXWlyjka4L6lQ=="],
+
+    "oci-usageapi": ["oci-usageapi@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-Y2nSO1mTlP9o8mluFGB5ZBTuh2Q/Dzjr53vcwlVfJaeL/F5+K00Zp8EZib9zBj0vMc9hTJGkUpMwrG3aRypnMQ=="],
+
+    "oci-vault": ["oci-vault@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-YBhLHd07gkEwtQzOLvWrwDBT993PwL+g6tyVU0KIBkXDpuCOqKao2oHcP1Q5iALKxGuCrQHg8l8KnrlNkut6dw=="],
+
+    "oci-vbsinst": ["oci-vbsinst@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-cpTn3FeSXldU2hk3T3C+ilBhTRf3f8cNXsIxB5RvpOMzmbDzSFVMCgLeLTjAj7KgHSYB12u/g9ruzy0qRRcWGA=="],
+
+    "oci-visualbuilder": ["oci-visualbuilder@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-WDyUynDX1Za2DuCPqMPKVV9yu+hDed20bm6yW2MmiyP4rrDETuUtLkXl4yvCZrqC7xZVnOltIFMQJZiA0a87RQ=="],
+
+    "oci-vnmonitoring": ["oci-vnmonitoring@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-0+hWt5n+aXO8mWrWNfOrOx8jEVQR1nRb5x9LWWex3y9urTowgYiN7DAWmCPy5rr7YKdRFg79DGG347+r5sTl0A=="],
+
+    "oci-vulnerabilityscanning": ["oci-vulnerabilityscanning@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-F+pxmXfPlt/+bnYqipih96psF9wMaaHmnZNV5AcPlTsH4yYt7w2d9IXAo3SPzojcaYg4b71+ATW2W7XybFrlwg=="],
+
+    "oci-waa": ["oci-waa@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-HQA7mjgmwMKwJ01xuFB5cc+NTos3pKNDQypCLSstZ08rBxI/UUf12cys+pOOp2c01IfxDYpkUPaNe3033+/zZA=="],
+
+    "oci-waas": ["oci-waas@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-xdif9FPPvJzcEnGKG4zHYAIznHtddkycn4SNtnLL4TU43iCj7ZDUhSUzCU8lqYKJ6PFYMyJR0EQv2QAXn6INwg=="],
+
+    "oci-waf": ["oci-waf@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-+apXJ/hg7hlx2c/4H9SR7+5gMPD+8EODZgyzHWPX0EDQBF7qYbf2mnIOrdI7ipNMWPxJxsFeNtM6s9EJi3Z5BQ=="],
+
+    "oci-wlms": ["oci-wlms@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-BWb7spsLC9AF0GkXROmgBRm2qMsNVSPqj4OqWljQ9ujVVdcm2+Nny+hc9JLtR3Nh49vb2XVkLWi+H/Ag5kY/lg=="],
+
+    "oci-workrequests": ["oci-workrequests@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-ovTh+H2e3ieoYQ9StnHWTn4w5ampKcNFUqOjEY788t2tfTTmpzcT6Cxu2Gaq9sXfUsi904+iiz9VI9mU2MfW1A=="],
+
+    "oci-zpr": ["oci-zpr@2.121.0", "", { "dependencies": { "oci-common": "2.121.0", "oci-workrequests": "2.121.0" } }, "sha512-ohet7/GI4C+DFvouZStaJgo2niUeDPf8fREGYUuV3zdskXuUZVag/HU/zKGDsozC52BMh2jN7+9LHFbsICaONg=="],
+
+    "on-finished": ["on-finished@2.4.1", "", { "dependencies": { "ee-first": "1.1.1" } }, "sha512-oVlzkg3ENAhCk2zdv7IJwd/QUD4z2RxRwpkcGY8psCVcCYZNq4wYnVWALHM+brtuJjePWiYF/ClmuDr8Ch5+kg=="],
+
+    "once": ["once@1.4.0", "", { "dependencies": { "wrappy": "1" } }, "sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w=="],
+
+    "opossum": ["opossum@5.0.1", "", {}, "sha512-iUDUQmFl3RanaBVLMDTZ6WtXj/Hk84pwJ5JWoJaQd1lXGifdApHhszI3biZvdBDdpTERCmB6x+7+uNvzhzVZIg=="],
+
+    "parseurl": ["parseurl@1.3.3", "", {}, "sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ=="],
+
+    "path-to-regexp": ["path-to-regexp@8.3.0", "", {}, "sha512-7jdwVIRtsP8MYpdXSwOS0YdD0Du+qOoF/AEPIt88PcCFrZCzx41oxku1jD88hZBwbNUIEfpqvuhjFaMAqMTWnA=="],
+
+    "proxy-addr": ["proxy-addr@2.0.7", "", { "dependencies": { "forwarded": "0.2.0", "ipaddr.js": "1.9.1" } }, "sha512-llQsMLSUDUPT44jdrU/O37qlnifitDP+ZwrmmZcoSKyLKvtZxpyV0n2/bD/N4tBAAZ/gJEdZU7KMraoK1+XYAg=="],
+
+    "qs": ["qs@6.14.0", "", { "dependencies": { "side-channel": "^1.1.0" } }, "sha512-YWWTjgABSKcvs/nWBi9PycY/JiPJqOD4JA6o9Sej2AtvSGarXxKC3OQSk4pAarbdQlKAh5D4FCQkJNkW+GAn3w=="],
+
+    "range-parser": ["range-parser@1.2.1", "", {}, "sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg=="],
+
+    "raw-body": ["raw-body@3.0.1", "", { "dependencies": { "bytes": "3.1.2", "http-errors": "2.0.0", "iconv-lite": "0.7.0", "unpipe": "1.0.0" } }, "sha512-9G8cA+tuMS75+6G/TzW8OtLzmBDMo8p1JRxN5AZ+LAp8uxGA8V8GZm4GQ4/N5QNQEnLmg6SS7wyuSmbKepiKqA=="],
+
+    "router": ["router@2.2.0", "", { "dependencies": { "debug": "^4.4.0", "depd": "^2.0.0", "is-promise": "^4.0.0", "parseurl": "^1.3.3", "path-to-regexp": "^8.0.0" } }, "sha512-nLTrUKm2UyiL7rlhapu/Zl45FwNgkZGaCpZbIHajDYgwlJCOzLSk+cIPAnsEqV955GjILJnKbdQC1nVPz+gAYQ=="],
+
+    "safe-buffer": ["safe-buffer@5.2.1", "", {}, "sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ=="],
+
+    "safer-buffer": ["safer-buffer@2.1.2", "", {}, "sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg=="],
+
+    "semver": ["semver@7.7.3", "", { "bin": { "semver": "bin/semver.js" } }, "sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q=="],
+
+    "send": ["send@1.2.0", "", { "dependencies": { "debug": "^4.3.5", "encodeurl": "^2.0.0", "escape-html": "^1.0.3", "etag": "^1.8.1", "fresh": "^2.0.0", "http-errors": "^2.0.0", "mime-types": "^3.0.1", "ms": "^2.1.3", "on-finished": "^2.4.1", "range-parser": "^1.2.1", "statuses": "^2.0.1" } }, "sha512-uaW0WwXKpL9blXE2o0bRhoL2EGXIrZxQ2ZQ4mgcfoBxdFmQold+qWsD2jLrfZ0trjKL6vOw0j//eAwcALFjKSw=="],
+
+    "serve-static": ["serve-static@2.2.0", "", { "dependencies": { "encodeurl": "^2.0.0", "escape-html": "^1.0.3", "parseurl": "^1.3.3", "send": "^1.2.0" } }, "sha512-61g9pCh0Vnh7IutZjtLGGpTA355+OPn2TyDv/6ivP2h/AdAVX9azsoxmg2/M6nZeQZNYBEwIcsne1mJd9oQItQ=="],
+
+    "setprototypeof": ["setprototypeof@1.2.0", "", {}, "sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw=="],
+
+    "side-channel": ["side-channel@1.1.0", "", { "dependencies": { "es-errors": "^1.3.0", "object-inspect": "^1.13.3", "side-channel-list": "^1.0.0", "side-channel-map": "^1.0.1", "side-channel-weakmap": "^1.0.2" } }, "sha512-ZX99e6tRweoUXqR+VBrslhda51Nh5MTQwou5tnUDgbtyM0dBgmhEDtWGP/xbKn6hqfPRHujUNwz5fy/wbbhnpw=="],
+
+    "side-channel-list": ["side-channel-list@1.0.0", "", { "dependencies": { "es-errors": "^1.3.0", "object-inspect": "^1.13.3" } }, "sha512-FCLHtRD/gnpCiCHEiJLOwdmFP+wzCmDEkc9y7NsYxeF4u7Btsn1ZuwgwJGxImImHicJArLP4R0yX4c2KCrMrTA=="],
+
+    "side-channel-map": ["side-channel-map@1.0.1", "", { "dependencies": { "call-bound": "^1.0.2", "es-errors": "^1.3.0", "get-intrinsic": "^1.2.5", "object-inspect": "^1.13.3" } }, "sha512-VCjCNfgMsby3tTdo02nbjtM/ewra6jPHmpThenkTYh8pG9ucZ/1P8So4u4FGBek/BjpOVsDCMoLA/iuBKIFXRA=="],
+
+    "side-channel-weakmap": ["side-channel-weakmap@1.0.2", "", { "dependencies": { "call-bound": "^1.0.2", "es-errors": "^1.3.0", "get-intrinsic": "^1.2.5", "object-inspect": "^1.13.3", "side-channel-map": "^1.0.1" } }, "sha512-WPS/HvHQTYnHisLo9McqBHOJk2FkHO/tlpvldyrnem4aeQp4hai3gythswg6p01oSoTl58rcpiFAjF2br2Ak2A=="],
+
+    "sshpk": ["sshpk@1.16.1", "", { "dependencies": { "asn1": "~0.2.3", "assert-plus": "^1.0.0", "bcrypt-pbkdf": "^1.0.0", "dashdash": "^1.12.0", "ecc-jsbn": "~0.1.1", "getpass": "^0.1.1", "jsbn": "~0.1.0", "safer-buffer": "^2.0.2", "tweetnacl": "~0.14.0" }, "bin": { "sshpk-conv": "bin/sshpk-conv", "sshpk-sign": "bin/sshpk-sign", "sshpk-verify": "bin/sshpk-verify" } }, "sha512-HXXqVUq7+pcKeLqqZj6mHFUMvXtOJt1uoUx09pFW6011inTMxqI8BA8PM95myrIyyKwdnzjdFjLiE6KBPVtJIg=="],
+
+    "statuses": ["statuses@2.0.2", "", {}, "sha512-DvEy55V3DB7uknRo+4iOGT5fP1slR8wQohVdknigZPMpMstaKJQWhwiYBACJE3Ul2pTnATihhBYnRhZQHGBiRw=="],
+
+    "toidentifier": ["toidentifier@1.0.1", "", {}, "sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA=="],
+
+    "tr46": ["tr46@0.0.3", "", {}, "sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw=="],
+
+    "tweetnacl": ["tweetnacl@0.14.5", "", {}, "sha512-KXXFFdAbFXY4geFIwoyNK+f5Z1b7swfXABfL7HXCmoIWMKU3dmS26672A4EeQtDzLKy7SXmfBu51JolvEKwtGA=="],
+
+    "type-is": ["type-is@2.0.1", "", { "dependencies": { "content-type": "^1.0.5", "media-typer": "^1.1.0", "mime-types": "^3.0.0" } }, "sha512-OZs6gsjF4vMp32qrCbiVSkrFmXtG/AZhY3t0iAMrMBiAZyV9oALtXO8hsrHbMXF9x6L3grlFuwW2oAz7cav+Gw=="],
+
+    "undici-types": ["undici-types@7.16.0", "", {}, "sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw=="],
+
+    "unpipe": ["unpipe@1.0.0", "", {}, "sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ=="],
+
+    "uuid": ["uuid@3.3.3", "", { "bin": { "uuid": "./bin/uuid" } }, "sha512-pW0No1RGHgzlpHJO1nsVrHKpOEIxkGg1xB+v0ZmdNH5OAeAwzAVrCnI2/6Mtx+Uys6iaylxa+D3g4j63IKKjSQ=="],
+
+    "vary": ["vary@1.1.2", "", {}, "sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg=="],
+
+    "verror": ["verror@1.10.0", "", { "dependencies": { "assert-plus": "^1.0.0", "core-util-is": "1.0.2", "extsprintf": "^1.2.0" } }, "sha512-ZZKSmDAEFOijERBLkmYfJ+vmk3w+7hOLYDNkRCuRuMJGEmqYNCNLyBBFwWKVMhfwaEF3WOd0Zlw86U/WC/+nYw=="],
+
+    "webidl-conversions": ["webidl-conversions@3.0.1", "", {}, "sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ=="],
+
+    "whatwg-fetch": ["whatwg-fetch@3.6.20", "", {}, "sha512-EqhiFU6daOA8kpjOWTL0olhVOF3i7OrFzSYiGsEMB8GcXS+RrzauAERX65xMeNWVqxA6HXH2m69Z9LaKKdisfg=="],
+
+    "whatwg-url": ["whatwg-url@5.0.0", "", { "dependencies": { "tr46": "~0.0.3", "webidl-conversions": "^3.0.0" } }, "sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw=="],
+
+    "wrappy": ["wrappy@1.0.2", "", {}, "sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ=="],
+
+    "http-errors/statuses": ["statuses@2.0.1", "", {}, "sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ=="],
+
+    "raw-body/iconv-lite": ["iconv-lite@0.7.0", "", { "dependencies": { "safer-buffer": ">= 2.1.2 < 3.0.0" } }, "sha512-cf6L2Ds3h57VVmkZe+Pn+5APsT7FpqJtEhhieDCvrE2MK5Qk9MyffgQyuxQTm6BChfeZNtcOLHp9IcWRVcIcBQ=="],
+  }
+}

@@ -1,0 +1,18 @@
+services:
+  oci-arm-creator:
+    build: .
+    container_name: oci-arm-creator
+    restart: unless-stopped
+
+    env_file:
+      - .env
+
+    ports:
+      - "3000:3000"
+
+    networks:
+      - oci-network
+
+networks:
+  oci-network:
+    driver: bridge

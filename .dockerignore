@@ -1,0 +1,14 @@
+# Git files
+.git
+.gitignore
+
+# Docker files
+Dockerfile
+docker-compose.yaml
+
+# Local environment
+.env
+node_modules
+
+# Project docs
+README.md
