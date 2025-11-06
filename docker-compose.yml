@@ -1,18 +1,21 @@
 services:
-  oci-arm-creator:
-    build: .
-    container_name: oci-arm-creator
-    restart: unless-stopped
+  oci-creator:
+    # Use the Dockerfile in the current directory to build the image
+    build:
+      context: .
 
-    env_file:
-      - .env
-
+    # Map the application port
     ports:
       - "3000:3000"
 
-    networks:
-      - oci-network
+    # Map the current host directory's logs folder to the container's working directory (/app)
+    # This allows you to view the log files (oci-vm-creator.log, etc.) on your host machine.
+    volumes:
+      - ./logs:/app/logs
 
-networks:
-  oci-network:
-    driver: bridge
+    # Load environment variables from the .env file
+    env_file:
+      - .env
+
+    # Always attempt to restart the container if it fails (e.g., waiting for capacity)
+    restart: always

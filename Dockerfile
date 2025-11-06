@@ -1,23 +1,25 @@
-# Start from the official Node.js 24 LTS image
-FROM node:24-alpine
+# Use the official Node.js 24 LTS image
+FROM node:24-slim
 
-# Install bun
-RUN npm install -g bun
+# Set the working directory inside the container
+WORKDIR /app
 
-# Set the working directory
-WORKDIR /usr/src/app
+# Copy package.json and package-lock.json first to leverage Docker caching
+# This step installs dependencies.
+COPY package*.json ./
+RUN npm install --omit=dev
 
-# Copy package.json and the bun lockfile
-COPY package.json bun.lock ./
+# Copy the entire source directory
+# The application code (config.js, index.js, logger.js, oci-service.js) 
+# is now available in /app/src
+COPY src/ ./src/ 
 
-# Install *only* production dependencies using bun
-RUN bun install --production
+# Set the environment variable for Node.js (good practice)
+ENV NODE_ENV=production
 
-# Copy the application source code
-COPY src/ ./src/
-
-# Expose the port the app runs on
+# The port Express listens on
 EXPOSE 3000
 
-# The command to run the application using node
-CMD [ "node", "src/index.js" ]
+# Run the application
+# The start script uses "node src/index.js"
+CMD ["npm", "start"]
